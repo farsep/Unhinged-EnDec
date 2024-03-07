@@ -20,6 +20,10 @@
 body{
     background-color: var(--light-blue-100);
     display: flex;
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    min-height: 100vh; /* Minimum height of viewport */
+    margin: 0; /* Remove default margin */
 }
 
 
@@ -61,6 +65,81 @@ body{
     font-size: 2.2em;
 }
 
+.advertence {
+    color: var(--dark-blue-300);
+    font-size: 1em;
+    padding: 1.2%;
+    width: 65%;
+}
 
+.advertence p::before {
+    display: inline-block;
+    width: 1em; /* Adjust based on your needs */
+    height: 1em; /* Adjust based on your needs */
+    content: "";
+    background-image: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+CiAgICA8cGF0aCBmaWxsPSIjMTRiOGE2IiBkPSJNNTEyIDY0QzI2NC42IDY0IDY0IDI2NC42IDY0IDUxMnMyMDAuNiA0NDggNDQ4IDQ0OHM0NDgtMjAwLjYgNDQ4LTQ0OFM3NTkuNCA2NCA1MTIgNjR6bTMyIDY2NGMwIDQuNC0zLjYgOC04IDhoLTQ4Yy00LjQgMC04LTMuNi04LThWNDU2YzAtNC40IDMuNi04IDgtOGg0OGM0LjQgMCA4IDMuNiA4IDh2Mjcyem0tMzItMzQ0YTQ4LjAxIDQ4LjAxIDAgMCAxIDAtOTZhNDguMDEgNDguMDEgMCAwIDEgMCA5NnoiLz4KPC9zdmc+Cg==');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 0.12em;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.2%;
+    width: 65%;
+}
+
+.btn{
+    font-size: 1.2em;
+    color: var(--light-blue-100);
+    width: 42%;
+    height: 2.5em;
+    background-color: var(--dark-blue-300);
+    border: none;
+    border-radius: 1em;
+}
+
+.second{
+    display: flex;
+    background-color: white;
+    border-radius: 2em;
+    height: 80vh;
+    align-content: center;
+}
+
+.second > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2%;
+}
+
+.second > div > img {
+    width: 95%;
+}
+
+.second > div > h2{
+    box-sizing: border-box;
+    font-size: 1.5em;
+    color: var(--dark-blue-300);
+    padding: 1.2%;
+    width: 90%;
+    text-align: center;
+}
+
+.second > div > p{
+    box-sizing: border-box;
+    font-size: 1em;
+    color: var(--dark-blue-300);
+    padding: 1.2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
 
 
