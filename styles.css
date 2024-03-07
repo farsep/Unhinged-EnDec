@@ -1,0 +1,66 @@
+:root {
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051; /* Assuming there's a typo in the image and the last color is meant to be 500 instead of another 400 */
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #6C757D; /* Note: You've provided two instances of Gray 500; assuming there's a Gray 300 that's missing */
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+    
+
+body{
+    background-color: var(--light-blue-100);
+    display: flex;
+}
+
+
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.first > div > img {
+    padding: 1.2%;
+    align-self: start;
+    justify-content: left;
+}
+
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2%;
+}
+
+.center h1{
+    font-size: 2.5em;
+    color: var(--dark-blue-300);
+    padding: 1.2%;
+}
+
+.center textarea{
+    width: 65%;
+    height: 60vh;
+    padding: 1.2%;
+    resize: none;
+    border: none;
+    background-color: var(--light-blue-300);
+    outline: none;
+    font-size: 2.2em;
+}
+
+
+
+
