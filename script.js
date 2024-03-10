@@ -1,3 +1,16 @@
+function generateElements(elementType, textContent, className) {
+    let newElement = document.createElement(elementType);
+    let textNode = document.createTextNode(textContent);
+    newElement.appendChild(textNode);
+
+    // Check if a class name is provided and add it to the new element
+    if (className) {
+        newElement.classList.add(className);
+    }
+
+    return newElement;
+}
+
 function encrypt(text) {
     let encryptedText = text;
     encryptedText = encryptedText.replace(/e/g, "enter");
@@ -19,28 +32,38 @@ function decrypt(text) {
 }
 
 // Example usage:
-const originalText = "gato";
-const encrypted = encrypt(originalText);
-const decrypted = decrypt(encrypted);
-
-console.log(`Original: ${originalText}`);
-console.log(`Encrypted: ${encrypted}`);
-console.log(`Decrypted: ${decrypted}`);
-
-function createParagraph(a) {
+function createParagraph(textContent, className) {
     let newElement = document.createElement("p");
-    let text = document.createTextNode(a);
-    para.appendChild(node);
+    let textNode = document.createTextNode(textContent);
+    newElement.appendChild(textNode);
+
+    // Check if a class name is provided and add it to the paragraph
+    if (className) {
+        newElement.classList.add(className);
+    }
+
+    return newElement;
 }
+
 
 function encryptText(){
     const inputText = document.getElementById('text-input').value;
-    document.getElementsByClassName('second').appendChild(createParagraph(encrypt(inputText)))
-    document.getElementsByClassName('second-central').display = "none";
+    const paragraph = createParagraph(encrypt(inputText), 'result-p');
+    const targetElement = document.getElementsByClassName('second')[0]; // Specify the element index
+    targetElement.appendChild(paragraph);
+    document.getElementsByClassName('second-central')[0].style.display = "none"; // Correctly access the style property
+    let newButton = generateElements("button", "Copy", "copy-btn");
+    targetElement.appendChild(newButton);
 };
 
 function decryptText(){
     const inputText = document.getElementById('text-input').value;
-    document.getElementsByClassName('second').appendChild(createParagraph(decrypt(inputText)))
-    document.getElementsByClassName('second-central').display = "none";
+    const paragraph = createParagraph(decrypt(inputText), 'result-p');
+    const targetElement = document.getElementsByClassName('second')[0]; // Specify the element index
+    targetElement.appendChild(paragraph);
+    document.getElementsByClassName('second-central')[0].style.display = "none"; // Correctly access the style property
+    let newButton = generateElements("button", "Copy", "copy-btn");
+    targetElement.appendChild(newButton);
 };
+
+

@@ -109,6 +109,7 @@ body{
     border-radius: 2em;
     height: 80vh;
     align-content: center;
+    width: 25%;
 }
 
 .second > div{
@@ -138,6 +139,17 @@ body{
     color: var(--dark-blue-300);
     padding: 1.2%;
     margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+
+/* //after DOM  */
+
+.result-p {
+    font-size: 1.2em;
+    color: var(--gray-400);
+    padding: 1.2%;
     width: 80%;
     text-align: center;
 }
