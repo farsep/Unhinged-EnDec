@@ -79,6 +79,14 @@ function createParagraph(textContent, className) {
 
 function encryptText(){
     const inputText = document.getElementById('text-input').value;
+    if (inputText === "") {
+        alert("Please enter a text to encrypt");
+        return;
+    }
+    if(resultP!=null && copyBtn!=null){
+        resultP.remove();
+        copyBtn.remove();
+    }
     const paragraph = createParagraph(encrypt(inputText), 'result-p');
     const targetElement = document.getElementsByClassName('second')[0]; // Specify the element index
     targetElement.appendChild(paragraph);
@@ -90,6 +98,14 @@ function encryptText(){
 
 function decryptText(){
     const inputText = document.getElementById('text-input').value;
+    if (inputText === "") {
+        alert("Please enter a text to decrypt");
+        return;
+    }
+    if(resultP!=null && copyBtn!=null){
+        resultP.remove();
+        copyBtn.remove();
+    }
     const paragraph = createParagraph(decrypt(inputText), 'result-p');
     const targetElement = document.getElementsByClassName('second')[0]; // Specify the element index
     targetElement.appendChild(paragraph);
@@ -99,6 +115,8 @@ function decryptText(){
     setAfterBTN();
 };
 
-
-
+copyBtn.addEventListener('click', function() {
+    const text = resultP.value;
+    navigator.clipboard.writeText(text);
+});
 
