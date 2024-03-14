@@ -1,3 +1,34 @@
+
+// Select the elements
+let second = document.querySelector('.second');
+
+let resultP;
+let copyBtn;
+
+
+function setAfterBTN(){
+    resultP = document.querySelector('.result-p');
+    copyBtn = document.querySelector('.copy-btn');
+    // Set the styles
+    resultP.style.fontSize = '1.2em';
+    resultP.style.color = 'var(--gray-400)';
+    resultP.style.padding = '1.2%';
+
+    second.style.display = 'flex';
+    second.style.flexDirection = 'column';
+    second.style.justifyContent = 'space-between';
+    second.style.boxSizing = 'border-box';
+    second.style.padding = '2%';
+
+    copyBtn.style.fontSize = '1.5em';
+    copyBtn.style.color = 'var(--dark-blue-300)';
+    copyBtn.style.width = '100%';
+    copyBtn.style.height = '2.5em';
+    copyBtn.style.backgroundColor = 'var(--light-blue-100)';
+    copyBtn.style.border = '1px solid var(--dark-blue-300)';
+    copyBtn.style.borderRadius = '1em';
+}
+
 function generateElements(elementType, textContent, className) {
     let newElement = document.createElement(elementType);
     let textNode = document.createTextNode(textContent);
@@ -54,6 +85,7 @@ function encryptText(){
     document.getElementsByClassName('second-central')[0].style.display = "none"; // Correctly access the style property
     let newButton = generateElements("button", "Copy", "copy-btn");
     targetElement.appendChild(newButton);
+    setAfterBTN();
 };
 
 function decryptText(){
@@ -64,6 +96,9 @@ function decryptText(){
     document.getElementsByClassName('second-central')[0].style.display = "none"; // Correctly access the style property
     let newButton = generateElements("button", "Copy", "copy-btn");
     targetElement.appendChild(newButton);
+    setAfterBTN();
 };
+
+
 
 

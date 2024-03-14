@@ -143,30 +143,3 @@ body{
     text-align: center;
 }
 
-
-/* //after DOM  */
-
-.result-p {
-    font-size: 1.2em;
-    color: var(--gray-400);
-    padding: 1.2%;
-}
-
-.second{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 2%;
-}
-
-.copy-btn{
-    font-size: 1.5em;
-    color: var(--dark-blue-300);
-    width: 100%;
-    height: 2.5em;
-    background-color: var(--light-blue-100) ;
-    border: 1px solid var(--dark-blue-300);
-    border-radius: 1em;
-}
-
