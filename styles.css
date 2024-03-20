@@ -20,10 +20,20 @@
 body{
     background-color: var(--light-blue-100);
     display: flex;
-    justify-content: center; /* Center children horizontally */
-    align-items: center; /* Center children vertically */
-    min-height: 100vh; /* Minimum height of viewport */
-    margin: 0; /* Remove default margin */
+    flex-direction: column;
+}
+
+header{
+    width: 70%;
+}
+
+.left > img{
+    padding: 3%;
+}
+
+
+.content{
+    display: flex;
 }
 
 
