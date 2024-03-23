@@ -18,6 +18,7 @@ function setAfterBTN(){
     resultPId.style.fontSize = '1.2em';
     resultPId.style.color = 'var(--gray-400)';
     resultPId.style.padding = '1.2%';
+    
 
     second.style.display = 'flex';
     second.style.flexDirection = 'column';
@@ -118,14 +119,14 @@ function encryptText(){
     document.getElementsByClassName('second-central')[0].style.display = "none"; // Correctly access the style property
     let newButton = generateElements("button", "Copy", "copy-btn", "copy-btn");
     targetElement.appendChild(newButton);
+    setAfterBTN();
+    generateStyles();
     Swal.fire({
         title: 'ENCRYPTED!',
         text: 'You can proceed to copy the encrypted text!',
         icon: 'success',
         confirmButtonText: 'Yeah!'
       })
-    setAfterBTN();
-    generateStyles();
 
 };
 
@@ -146,14 +147,14 @@ function decryptText(){
     let newButton = generateElements("button", "Copy", "copy-btn", "copy-btn");
     targetElement.appendChild(newButton);
     document.getElementById('btn-decode').textContent = "Decrypt!";
+    setAfterBTN();
+    generateStyles();
     Swal.fire({
         title: 'DECRYPTED!',
         text: 'You can proceed to copy the decrypted text!',
         icon: 'success',
         confirmButtonText: 'Yeah!'
       })
-    setAfterBTN();
-    generateStyles();
 };
 
 function copyText(){
