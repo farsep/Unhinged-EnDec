@@ -16,8 +16,9 @@ function setAfterBTN(){
     resultPClass = document.getElementsByClassName('result-p')[0];
     // Set the styles
     resultPId.style.fontSize = '1.2em';
+    resultPId.style.width = '95%';
+    resultPId.style.boxSizing = 'border-box';
     resultPId.style.color = 'var(--gray-400)';
-    resultPId.style.padding = '1.2%';
     
 
     second.style.display = 'flex';
