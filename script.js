@@ -171,13 +171,19 @@ addEventListener('DOMContentLoaded', function(){
     let {userAgent} = navigator;
     let isTablet = userAgent.match(/iPad|android|iPhone|Tablet|Mobile/i);
     if (isTablet) {
-        getElementById('text-input').placeholder = 'Ingrese el Texto Aqui';
+        document.getElementById('text-input').placeholder = 'Ingrese el Texto Aqui';
+        let styles = document.createElement('style');
+        styles.innerHTML = `
+        .center > h1 {
+            display: none;
+        }
 
-        let style = document.createElement('style');
-        style.innerHTML = `
-        
+        #text-input::placeholder {
+            font-size: 1em;
+            color: var(--dark-blue-300);
+        }    
         `
-        
+        document.head.appendChild(styles);
     }
 })
 

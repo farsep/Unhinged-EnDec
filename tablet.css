@@ -1,4 +1,4 @@
-@media screen and ((max-width: 768px) and (min-width: 400px)){
+@media screen and ((max-width: 1024px) and (min-width: 400px)){
     body{
         height: auto;
     }
@@ -36,14 +36,10 @@
         height: 78vh;
     }
 
-    .center h1{
-        display: none;
-    }
-
     .center textarea{
         width: 90%;
         height: 80%;
-        font-size: 1.5em;
+        font-size: 3em;
     }
 
     .advertence{
