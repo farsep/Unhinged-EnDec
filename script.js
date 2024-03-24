@@ -165,5 +165,21 @@ function copyText(){
     copyBtnId.textContent = "Copied!";
 }
 
+//ADD DOM BY USERAGENT
+
+addEventListener('DOMContentLoaded', function(){
+    let {userAgent} = navigator;
+    let isTablet = userAgent.match(/iPad|android|iPhone|Tablet|Mobile/i);
+    if (isTablet) {
+        getElementById('text-input').placeholder = 'Ingrese el Texto Aqui';
+
+        let style = document.createElement('style');
+        style.innerHTML = `
+        
+        `
+        
+    }
+})
+
 
 

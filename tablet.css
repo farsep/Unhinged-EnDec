@@ -1,0 +1,83 @@
+@media screen and ((max-width: 768px) and (min-width: 400px)){
+    body{
+        height: auto;
+    }
+
+    header{
+        width: 100%;
+        height: 8vh;
+    }
+
+    .left{
+        width: 100%;
+        height: 100%;
+    }
+
+    .left > img{
+        height: 80%;
+        margin-top: 2%;
+        padding: 0;
+    }
+
+    .content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first{
+        width: 100%;
+        height: auto;
+    }
+
+    .center{
+        height: auto;
+        height: 78vh;
+    }
+
+    .center h1{
+        display: none;
+    }
+
+    .center textarea{
+        width: 90%;
+        height: 80%;
+        font-size: 1.5em;
+    }
+
+    .advertence{
+        width: 90%;
+    }
+
+    .advertence p{
+        font-size: 1.4em;
+    }
+
+    .buttons{
+        width: 90%;
+        padding: 0;
+    }
+
+    .buttons button{
+        width: 45%;
+        font-size: 1.5em;
+    }
+
+    .second{
+        width: 90%;
+        height: auto;   
+        align-self: center;
+        
+    }
+
+    .second-central{
+        width: 100%;
+        margin: 0 auto;
+        height: 12vh;
+    }
+
+    .second-central img{
+        display: none;
+    }
+}
