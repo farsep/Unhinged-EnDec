@@ -14,18 +14,23 @@ function setAfterBTN(){
 
     copyBtnClass = document.getElementsByClassName('copy-btn')[0];
     resultPClass = document.getElementsByClassName('result-p')[0];
+    
     // Set the styles
-    resultPId.style.fontSize = '1.2em';
+
+    resultPId.style.fontSize = '1.8em';
     resultPId.style.width = '95%';
     resultPId.style.boxSizing = 'border-box';
     resultPId.style.color = 'var(--gray-400)';
     
+
 
     second.style.display = 'flex';
     second.style.flexDirection = 'column';
     second.style.justifyContent = 'space-between';
     second.style.boxSizing = 'border-box';
     second.style.padding = '2%';
+    second.style.marginBottom = '2.5%';
+
 
     copyBtnId.style.fontSize = '1.5em';
     copyBtnId.style.color = 'var(--dark-blue-300)';
@@ -67,6 +72,28 @@ function generateStyles(){
     `
     document.head.appendChild(style);
 }
+
+// Add Dinamyc Height
+function dynamicHeight(){
+    let {userAgent} = navigator;
+    let isTablet = userAgent.match(/iPad|android|iPhone|Tablet|Mobile/i);
+
+    if (isTablet) {
+        let second = document.getElementById('second');
+        let pResult = document.getElementsByClassName('result-p')[0];
+        let copyBtn = document.getElementsByClassName('copy-btn')[0];
+        
+        console.log(second, pResult, copyBtn);
+
+        if (second && pResult && copyBtn) {
+            let totalSize = pResult.offsetHeight + copyBtn.offsetHeight;
+            second.style.height = `${totalSize * 2}px`;
+            console.log(totalSize);
+        }
+    }
+}
+
+
 function encrypt(text) {
     let encryptedText = text;
     encryptedText = encryptedText.replace(/e/g, "enter");
@@ -122,6 +149,7 @@ function encryptText(){
     targetElement.appendChild(newButton);
     setAfterBTN();
     generateStyles();
+    dynamicHeight();
     Swal.fire({
         title: 'ENCRYPTED!',
         text: 'You can proceed to copy the encrypted text!',
@@ -150,6 +178,7 @@ function decryptText(){
     document.getElementById('btn-decode').textContent = "Decrypt!";
     setAfterBTN();
     generateStyles();
+    dynamicHeight();
     Swal.fire({
         title: 'DECRYPTED!',
         text: 'You can proceed to copy the decrypted text!',
@@ -171,8 +200,13 @@ addEventListener('DOMContentLoaded', function(){
     let {userAgent} = navigator;
     let isTablet = userAgent.match(/iPad|android|iPhone|Tablet|Mobile/i);
     if (isTablet) {
-        document.getElementById('text-input').placeholder = 'Ingrese el Texto Aqui';
+        let textInput = document.getElementById('text-input');
+        if (textInput){
+            textInput.placeholder = 'Ingrese el Texto Aqui';
+        } 
+        
         let styles = document.createElement('style');
+
         styles.innerHTML = `
         .center > h1 {
             display: none;
@@ -181,11 +215,11 @@ addEventListener('DOMContentLoaded', function(){
         #text-input::placeholder {
             font-size: 1em;
             color: var(--dark-blue-300);
-        }    
-        `
+        }`;    
         document.head.appendChild(styles);
     }
 })
+
 
 
 
