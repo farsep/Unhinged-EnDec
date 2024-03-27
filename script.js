@@ -106,11 +106,11 @@ function encrypt(text) {
 
 function decrypt(text) {
     let decryptedText = text;
-    decryptedText = decryptedText.replace(/enter/g, "e");
-    decryptedText = decryptedText.replace(/imes/g, "i");
-    decryptedText = decryptedText.replace(/ai/g, "a");
-    decryptedText = decryptedText.replace(/ober/g, "o");
     decryptedText = decryptedText.replace(/ufat/g, "u");
+    decryptedText = decryptedText.replace(/ober/g, "o");
+    decryptedText = decryptedText.replace(/imes/g, "i");
+    decryptedText = decryptedText.replace(/enter/g, "e");
+    decryptedText = decryptedText.replace(/ai/g, "a");
     return decryptedText;
 }
 
