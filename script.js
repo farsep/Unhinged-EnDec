@@ -73,6 +73,7 @@ function generateStyles(){
     document.head.appendChild(style);
 }
 
+
 // Add Dinamyc Height
 function dynamicHeight(){
     let {userAgent} = navigator;
@@ -82,9 +83,7 @@ function dynamicHeight(){
         let second = document.getElementById('second');
         let pResult = document.getElementsByClassName('result-p')[0];
         let copyBtn = document.getElementsByClassName('copy-btn')[0];
-        
         console.log(second, pResult, copyBtn);
-
         if (second && pResult && copyBtn) {
             let totalSize = pResult.offsetHeight + copyBtn.offsetHeight;
             second.style.height = `${totalSize * 2}px`;
@@ -201,6 +200,8 @@ addEventListener('DOMContentLoaded', function(){
     let isTablet = userAgent.match(/iPad|android|iPhone|Tablet|Mobile/i);
     if (isTablet) {
         let textInput = document.getElementById('text-input');
+
+        document.getElementById('doll-img').style.display = 'none';
         if (textInput){
             textInput.placeholder = 'Ingrese el Texto Aqui';
         } 
@@ -208,6 +209,7 @@ addEventListener('DOMContentLoaded', function(){
         let styles = document.createElement('style');
 
         styles.innerHTML = `
+
         .center > h1 {
             display: none;
         }
@@ -217,6 +219,17 @@ addEventListener('DOMContentLoaded', function(){
             color: var(--dark-blue-300);
         }`;    
         document.head.appendChild(styles);
+
+
+        let btn = document.getElementsByClassName('btn');
+        let btnContainer = document.getElementById('buttons-container')
+        
+        if (btn && btnContainer) {
+            let totalSize = btn[0].offsetHeight + btn[1].offsetHeight;
+            btnContainer.style.height = `${totalSize * 1.35}px`;
+            console.log(totalSize);
+        }
+
     }
 })
 

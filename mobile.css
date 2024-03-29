@@ -1,0 +1,76 @@
+@media screen and ((max-width: 400px) and (min-width: 300px)){
+    body{
+        height: auto;
+    }
+
+    header{
+        width: 100%;
+        height: 14vh;
+    }
+
+
+    .left > img{
+        padding: 3%
+    }
+
+    .content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first{
+        width: 100%;
+        height: auto;
+    }
+
+    .center{
+        height: auto;
+        width: 100%;
+    }
+
+    .center textarea{
+        width: 90%;
+        font-size: 2em;
+    }
+
+    .advertence{
+        width: 90%;
+    }
+
+    .buttons{
+        width: 90%;
+        padding: 0;
+        flex-direction: column;
+        margin-top: 4%;
+    }
+
+    .btn{
+        width: 100%;
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+    .second{
+        margin-top: 4%;
+        align-self: center;
+        width: 80%;
+        height: auto;
+    }
+
+    .second-central{
+        height: auto;
+    }
+
+    .second-central h2{
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .second-central p{
+        font-size: 1.5em;
+        padding: 3%;
+    }
+
+}
