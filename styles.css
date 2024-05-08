@@ -22,7 +22,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    min-width: 409px;
+    min-width: 484px;
 }
 
 header{
